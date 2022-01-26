@@ -30,8 +30,7 @@ public class PersonController {
     PersonService personService;
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     // https://www.dariawan.com/tutorials/spring/documenting-spring-boot-rest-api-springdoc-openapi-3/
-    @Operation(summary = "Get creditcards by type and document or cuit", parameters = {
-            @Parameter(in = ParameterIn.QUERY, description = "property filters, selects properties of an object using a subset of the Facebook Graph API filtering syntax", name = "fields", required = false, example = "*", content = @Content(schema = @Schema(type = "String")))})
+    @Operation(summary = "Get creditcards by type and document or cuit")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Found the creditcards", content = {
             @Content(mediaType = "application/json", schema = @Schema(implementation = Person.class))}),
             @ApiResponse(responseCode = "400", description = "Bad Request. Invalid paremeter supplied", content = {
@@ -47,8 +46,7 @@ public class PersonController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes=MediaType.APPLICATION_JSON_VALUE)
     // https://www.dariawan.com/tutorials/spring/documenting-spring-boot-rest-api-springdoc-openapi-3/
-    @Operation(summary = "Get creditcards by type and document or cuit", parameters = {
-            @Parameter(in = ParameterIn.QUERY, description = "property filters, selects properties of an object using a subset of the Facebook Graph API filtering syntax", name = "fields", required = false, example = "*", content = @Content(schema = @Schema(type = "String")))})
+    @Operation(summary = "Get Person by personPK")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Found the creditcards", content = {
             @Content(mediaType = "application/json", schema = @Schema(implementation = Person.class))}),
             @ApiResponse(responseCode = "400", description = "Bad Request. Invalid paremeter supplied", content = {
@@ -65,8 +63,7 @@ public class PersonController {
 
     @PutMapping (produces = MediaType.APPLICATION_JSON_VALUE, consumes=MediaType.APPLICATION_JSON_VALUE)
     // https://www.dariawan.com/tutorials/spring/documenting-spring-boot-rest-api-springdoc-openapi-3/
-    @Operation(summary = "Get creditcards by type and document or cuit", parameters = {
-            @Parameter(in = ParameterIn.QUERY, description = "property filters, selects properties of an object using a subset of the Facebook Graph API filtering syntax", name = "fields", required = false, example = "*", content = @Content(schema = @Schema(type = "String")))})
+    @Operation(summary = "Get creditcards by type and document or cuit")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Found the creditcards", content = {
             @Content(mediaType = "application/json", schema = @Schema(implementation = Person.class))}),
             @ApiResponse(responseCode = "400", description = "Bad Request. Invalid paremeter supplied", content = {
@@ -83,8 +80,7 @@ public class PersonController {
 
     @PatchMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes=MediaType.APPLICATION_JSON_VALUE)
     // https://www.dariawan.com/tutorials/spring/documenting-spring-boot-rest-api-springdoc-openapi-3/
-    @Operation(summary = "Get creditcards by type and document or cuit", parameters = {
-            @Parameter(in = ParameterIn.QUERY, description = "property filters, selects properties of an object using a subset of the Facebook Graph API filtering syntax", name = "fields", required = false, example = "*", content = @Content(schema = @Schema(type = "String")))})
+    @Operation(summary = "Get creditcards by type and document or cuit")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Found the creditcards", content = {
             @Content(mediaType = "application/json", schema = @Schema(implementation = Person.class))}),
             @ApiResponse(responseCode = "400", description = "Bad Request. Invalid paremeter supplied", content = {
